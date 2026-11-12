@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Dr. Saiyadali H. Ladakhan — researcher in 3D/4D printing, smart materials, advanced manufacturing and soft robotics.">
+<title>Dr. Saiyadali H. Ladakhan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&display=swap" rel="stylesheet">
+<style>
+/* ===== EASY CUSTOMIZATION: change these colors only ===== */
+:root{
+  --ink:#16212b;
+  --muted:#66717c;
+  --line:#e6ebef;
+  --soft:#f5f8fa;
+  --accent:#007f8b;
+  --accent2:#f08a4b;
+  --accent-soft:#e9f6f6;
+  --max:1040px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.65;background:#fff}
+.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav{height:66px;display:flex;justify-content:space-between;align-items:center}
+.brand{font:650 1.15rem 'Source Serif 4',Georgia,serif;text-decoration:none}
+.links{display:flex;gap:22px}.links a{text-decoration:none;font-size:.88rem;color:#44515d}.links a:hover{color:var(--accent)}
+.hero-shell{background:linear-gradient(135deg,#f9fcfd 0%,#eef8f7 58%,#fff5ed 100%);border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1.48fr .72fr;gap:70px;padding:88px 0 72px}
+.kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+.hero h1{font:650 clamp(2.8rem,6vw,5rem)/1 'Source Serif 4',Georgia,serif;letter-spacing:-.035em;margin:12px 0 24px;max-width:780px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:1.12rem;color:#4f5d68;max-width:710px}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}.btn{padding:10px 15px;border:1px solid #cbd6dc;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;background:#fff}.btn:hover{border-color:var(--accent);color:var(--accent)}.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.aside{border-top:4px solid var(--accent2);padding-top:18px;font-size:.9rem}.aside strong{display:block}.aside p{margin:3px 0 16px;color:var(--muted)}
+section{padding:62px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:190px 1fr;gap:54px}.grid>h2{font:650 1.6rem 'Source Serif 4',Georgia,serif;margin:0}.intro{font-size:1.03rem;color:#53606b;margin-top:0}
+.research{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}.card{border:1px solid var(--line);border-radius:14px;padding:21px;background:linear-gradient(180deg,#fff,#fbfcfd);box-shadow:0 8px 26px rgba(21,42,53,.04)}.card::before{content:"";display:block;width:34px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));margin-bottom:14px}.card h3{font:650 1.15rem 'Source Serif 4',Georgia,serif;margin:0 0 7px}.card p{margin:0;color:#606d77;font-size:.92rem}
+.vision{margin-top:22px;background:var(--accent-soft);border-left:4px solid var(--accent);padding:21px;border-radius:0 12px 12px 0}.vision strong{font:650 1.08rem 'Source Serif 4',Georgia,serif}.vision p{margin:6px 0 0;color:#50606a}
+.pub{display:grid;grid-template-columns:64px 1fr auto;gap:17px;padding:18px 0;border-bottom:1px solid var(--line)}.pub:first-of-type{border-top:1px solid var(--line)}.year{font-size:.85rem;font-weight:700;color:var(--accent)}.pub h3{font-size:.97rem;line-height:1.48;margin:0 0 5px}.pub p{font-size:.84rem;color:var(--muted);margin:0}.pub a{font-size:.82rem;text-decoration:none;border-bottom:1px solid #b4c3ca;white-space:nowrap;color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:46px}.two h3{font:650 1.15rem 'Source Serif 4',Georgia,serif}.item{padding:0 0 19px}.item time{font-size:.8rem;color:var(--accent);font-weight:700}.item strong{display:block;margin:2px 0}.item p{font-size:.88rem;color:var(--muted);margin:0}.award{padding:14px 0;border-bottom:1px solid var(--line)}.award strong{display:block}.award span{font-size:.86rem;color:var(--muted)}
+.contact{padding-bottom:82px}.contactbox{background:linear-gradient(135deg,#15232c,#0b6971);color:#fff;border-radius:18px;padding:36px;display:flex;justify-content:space-between;gap:30px;align-items:center;box-shadow:0 18px 50px rgba(0,78,85,.16)}.contactbox h2{font:650 1.8rem 'Source Serif 4',Georgia,serif;margin:0 0 8px}.contactbox p{color:#dce7e9;margin:0}.contactbox a{color:#fff}
+.footer{border-top:1px solid var(--line);padding:24px 0 36px;font-size:.82rem;color:#77838d}
+@media(max-width:760px){.links{display:none}.hero,.grid,.research,.two{grid-template-columns:1fr}.hero{gap:38px;padding-top:56px}.grid{gap:20px}.pub{grid-template-columns:52px 1fr}.pub a{grid-column:2}.contactbox{display:block}.contactbox .actions{margin-top:18px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#top">Saiyadali H. Ladakhan</a><nav class="links"><a href="#research">Research</a><a href="#publications">Publications</a><a href="#background">Background</a><a href="#contact">Contact</a></nav></div></header>
+<main id="top">
+<div class="hero-shell"><div class="wrap hero"><div><div class="kicker">Advanced Manufacturing · Smart Structures · Soft Robotics</div><h1>Designing structures that can <em>adapt, sense, and respond.</em></h1><p class="lead">I am Dr. Saiyadali H. Ladakhan, a researcher working at the intersection of <strong>3D/4D printing, smart materials, advanced manufacturing and soft robotics</strong>. My work focuses on developing reliable manufacturing approaches for functional and adaptive engineering structures.</p><div class="actions"><a class="btn primary" href="#research">Explore research</a><a class="btn" href="Saiyadali_Ladakhan_CV.pdf" target="_blank">CV ↗</a><a class="btn" href="mailto:saiyadali.ladakhan@iit.it">Email</a></div></div><aside class="aside"><strong>Postdoctoral Research Fellow</strong><p>Istituto Italiano di Tecnologia (IIT)<br>Genoa, Italy</p><strong>Ph.D.</strong><p>Mechanical, Materials & Aerospace Engineering<br>IIT Dharwad, India</p><strong>Research themes</strong><p>4D printing · DfAM · smart materials · soft actuators · functional structures</p></aside></div></div>
+
+<section id="research"><div class="wrap grid"><h2>Research</h2><div><p class="intro">My research connects materials, manufacturing and mechanics to create functional structures that can change shape, interact safely with their environment, and support next-generation robotic and engineering applications.</p><div class="research"><article class="card"><h3>3D & 4D Printing</h3><p>Multi-material fabrication, process development, Design for Additive Manufacturing, Design of Experiments and repeatable printing strategies.</p></article><article class="card"><h3>Smart & Adaptive Structures</h3><p>Shape-memory alloys and polymers, programmable geometries, morphing concepts and mechanically adaptive structures.</p></article><article class="card"><h3>Soft Robotics</h3><p>Design and manufacturing of compliant robotic structures, soft actuators and functional systems for large and complex deformation.</p></article><article class="card"><h3>Mechanics & Characterization</h3><p>Mechanical testing, interfacial mechanics, modelling and process–structure–property relationships for additively manufactured materials.</p></article></div><div class="vision"><strong>Research direction</strong><p>I am interested in building a coherent research program around manufacturable smart structures and soft robotic systems, combining advanced fabrication, material characterization, functional design and experimental validation.</p></div></div></div></section>
+
+<section id="publications"><div class="wrap grid"><h2>Publications</h2><div><p class="intro">Peer-reviewed journal work in 4D printing, smart materials, actuator design and manufacturing mechanics.</p>
+<article class="pub"><span class="year">2024</span><div><h3>4D printing of PLA/PLA-TPU-based metastructure: examining the mechanical, thermal, and shape memory properties</h3><p>S. H. Ladakhan, R. B. Sreesha, S. M. Adinarayanappa · Smart Materials and Structures</p></div><a href="https://doi.org/10.1088/1361-665X/ad7c0a" target="_blank">DOI ↗</a></article>
+<article class="pub"><span class="year">2024</span><div><h3>Enhancement of interfacial shear strength of shape memory alloy–polylactic acid composite and predictive modeling through cohesive zone modeling approach for 4D printing</h3><p>S. H. Ladakhan et al. · International Journal of Advanced Manufacturing Technology</p></div><a href="https://doi.org/10.1007/s00170-024-14506-7" target="_blank">DOI ↗</a></article>
+<article class="pub"><span class="year">2023</span><div><h3>A study of the functional capabilities of shape memory alloy-based 4D printed analogous bending actuators</h3><p>S. H. Ladakhan, R. B. Sreesha, S. M. Adinarayanappa · Progress in Additive Manufacturing</p></div><a href="https://doi.org/10.1007/s40964-023-00456-1" target="_blank">DOI ↗</a></article>
+<article class="pub"><span class="year">2023</span><div><h3>Investigation of Mechanical Behavior of Nano-alumina-Reinforced Polylactic Acid Composite Through Micro-mechanism Approach</h3><p>V. Kumar, D. Mudakavi, R. B. Sreesha, S. H. Ladakhan, S. M. Adinarayanappa · Journal of Materials Engineering and Performance</p></div><a href="https://doi.org/10.1007/s11665-023-08589-8" target="_blank">DOI ↗</a></article>
+<article class="pub"><span class="year">2023</span><div><h3>Design and fabrication of shape memory alloy-based 4D-printed actuator for FWMAV: A performance study</h3><p>A. J. Singh, S. Wala, S. H. Ladakhan, R. B. Sreesha, S. M. Adinarayanappa · Materials Today: Proceedings</p></div><a href="https://doi.org/10.1016/j.matpr.2023.02.160" target="_blank">DOI ↗</a></article>
+<article class="pub"><span class="year">2022</span><div><h3>An experimental investigation on performance of NiTi-based shape memory alloy 4D printed actuators for bending application</h3><p>R. B. Sreesha, S. H. Ladakhan*, D. Mudakavi, S. M. Adinarayanappa · International Journal of Advanced Manufacturing Technology</p></div><a href="https://doi.org/10.1007/s00170-022-09875-w" target="_blank">DOI ↗</a></article></div></div></section>
+
+<section id="background"><div class="wrap grid"><h2>Background</h2><div class="two"><div><h3>Experience & Education</h3><div class="item"><time>2025 — present</time><strong>Postdoctoral Research Fellow · IIT Genoa</strong><p>Research in advanced manufacturing, material and mechanical characterization, and design methods for functional soft structures.</p></div><div class="item"><time>2020 — 2024</time><strong>Ph.D. · IIT Dharwad</strong><p>Mechanical, Materials & Aerospace Engineering. Multi-material and multifunctional 4D printing technology.</p></div><div class="item"><time>2017 — 2019</time><strong>M.Tech. · R.V. College of Engineering</strong><p>Tool Engineering. Design and development of a mini-injection moulding machine.</p></div></div><div><h3>Selected Recognition</h3><div class="award"><strong>Granted Patent · 2024</strong><span>Indian Patent No. 531392 — programmable SMA assembly for 4D printing.</span></div><div class="award"><strong>Technology Translation Award (TETRA)</strong><span>Support for further development and automation of 4D-printing technology.</span></div><div class="award"><strong>Best Oral Presentation · 2023</strong><span>ShOdhaYAntrikI, IIT Dharwad.</span></div><div class="award"><strong>IInvenTiv 2022 & 2024</strong><span>4D-printing research selected for national research and innovation showcases.</span></div></div></div></div></div></section>
+
+<section id="contact" class="contact"><div class="wrap"><div class="contactbox"><div><h2>Research, collaboration, or academic opportunities?</h2><p>I welcome conversations around additive manufacturing, 4D printing, smart structures, materials and soft robotics.</p></div><div class="actions"><a href="mailto:saiyadali.ladakhan@iit.it">Email</a><a href="https://www.iit.it/it/people-profile/-/people/saiyadali-ladakhan" target="_blank">IIT profile ↗</a></div></div></div></section>
+</main>
+<footer class="footer"><div class="wrap">© <span id="y"></span> Dr. Saiyadali H. Ladakhan</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body></html>
